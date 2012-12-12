@@ -65,7 +65,7 @@ public class SampleRESTService {
     }
 
     /**
-     * Get xml data.
+     * Get html data.
      * <p/>
      * http://localhost:8080/statss-web/rest/html
      *
@@ -75,8 +75,8 @@ public class SampleRESTService {
     @Produces({MediaType.TEXT_HTML})
     @Path("html")
     public ModelAndView getSampleHtmlData() {
-        // forward to the "contacts" view, with a request attribute named
+        // forward to the "chart" view, with a request attribute named
         // "contacts" that has all of the existing contacts
-        return new ModelAndView("contacts", "contacts", new OrderEventLog("myItemName"));
+        return new ModelAndView("chart", "contacts", new OrderEventLog("myItemName"));
     }
 }
